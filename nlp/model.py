@@ -402,11 +402,8 @@ def predict_pair(
     model.to(device)
     model.eval()
     
-    # Prepare input in the expected format
-    # The forward function expects lists of known_texts and unknown_texts
-    # where each element is a list of texts
+
     with torch.no_grad():
-        # Format inputs as expected by the model (list of lists)
         known_texts = [[known_text]]
         unknown_texts = [[unknown_text]]
         
@@ -416,7 +413,7 @@ def predict_pair(
         # Convert to probability
         probs = torch.softmax(logits, dim=1)[:, 1].cpu().numpy()  # Probability of same author
         
-        # Return the single probability value
+        # Return the probability value
         return float(probs[0])
 
 # Main function
