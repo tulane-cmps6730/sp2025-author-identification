@@ -27,3 +27,5 @@ Our project investigates and compares different generations of AI models to tack
 Our project explored the challenging task of authorship verification by comparing various model architectures. By leveraging the power of pre-trained Transformers like BERT and comparing them against other methods, we gained insights into how different techniques capture the subtle signals of writing style. While challenges like data preparation and hyperparameter tuning exist, modern deep learning models show significant improvement for this task.
 For more details, check out the full project report (`report/Report.pdf`).
 For Screenshots of our demo, check out the screenshots in the report
+
+**The authorship verification model is in `nlp/model.py`**
